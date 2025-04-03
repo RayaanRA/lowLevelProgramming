@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="homepage-title">Homepage | RMHS Coding Club</title>
+    <link rel="icon" href="../Images/rmhs-mustang.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100..900&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Oswald Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!--Geist Font-->
+    <link href="https://assets.codepen.io/605876/GeistVF.ttf" rel="stylesheet">
+</head>
+
+<style>
+    /* Remove margins and padding from html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height */
+}
+
+body {
+    background: #108dc7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Andalé Mono", monospace;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60.25% 187.5%;
+    position: sticky;
+    background: #108dc7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header h4 {
+    margin: 0;
+    font-size: 150%;
+}
+
+#home-nav {
+    display: flex;
+    gap: 250%;
+    text-align: right;
+    margin-right: 6.25%;
+    color: white;
+    font-size: 187.5%;
+}
+
+h1, p {
+    text-shadow: 12.5% 12.5% 31.25% rgba(0, 0, 0, 0.07);
+}
+
+#mainTEXT {
+    text-align: right;
+    font-size: 1250%;
+    margin-right: 312.5%;
+    margin-bottom: 30px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-image {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color to white */
+}
+
+
+/* hover animation */
+.hover-underline {
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+  
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    /*
+    transform-origin: right;
+    */
+    transition: transform 0.4s ease-out;
+}
+  
+.hover-underline::before {
+    top: 0px;
+    transform-origin: left;
+}
+  
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+  }
+
+  #mainDiv p {
+    font-size: 30px;
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+
+  /* Scrolling Txt Animation */
+  .scrolling-words-container {
+    display: flex;
+    align-items: right;
+    font-size: 200px;
+    font-weight: 600;
+    font-family: "Andalé Mono", monospace;
+    overflow: hidden;
+    margin-left: 1450px;
+  }
+  
+  .scrolling-words-box {
+    height: 210px; /* Adjust based on font size */
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-words-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: scrollUp 10s linear infinite; /* 10s total duration for smooth timing */
+}
+
+.scrolling-words-box li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 210px; /* Ensure each word fits fully */
+    list-style: none;
+}
+  
+  /* Keyframes for scrolling animation */
+  @keyframes scrollUp {
+    0%, 20% {
+        transform: translateY(0);
+    }
+    25%, 45% {
+        transform: translateY(-25%);
+    }
+    50%, 70% {
+        transform: translateY(-50%);
+    }
+    75%, 95% {
+        transform: translateY(-75%);
+    }
+    100% {
+        transform: translateY(-100%); /* Moves beyond last word */
+    }
+    110% {
+        transform: translateY(-125%)
+    }
+
+}
+</style>
+
+<body>
+    <header>
+        <nav id="home-nav" class="fade-image">
+            <a href="../mainFiles/index.html" target="_blank" class="hover-underline"><h2>Home</h2></a>
+            <a href="../mainFiles/about.html" target="_blank" class="hover-underline"><h2>About</h2></a>
+            <a href="../mainFiles/contact.html" target="_blank" class="hover-underline"><h2>Contact</h2></a>
+            <a href="../mainFiles/mission.html" target="_blank" class="hover-underline"><h2>Mission</h2></a>
+        </nav>
+    </header>
+
+    <div id="mainDiv">
+        <h1 id="mainTEXT" class="fade-image"><i>Students building</i></h1>
+    </div>
+
+    <div class="scrolling-words-container">
+        <div class="scrolling-words-box">
+          <ul>
+            <li style="font-family: 'Andalé Mono', monospace;"><i>websites.</i></li>
+            <li style="font-family: 'Andalé Mono', monospace;"><i>connections.</i></li>
+            <li style="font-family: 'Andalé Mono', monospace;"><i>solutions.</i></li>
+            <li style="font-family: 'Andalé Mono', monospace;"><i>platforms.</i></li>
+            
+          </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
